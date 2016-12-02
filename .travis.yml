@@ -9,8 +9,16 @@ python:
   - "3.5"
 
 cache: pip
-# install: 
-#   - pip install -r requirements.txt
+
+install: 
+  - pip install -r requirements.txt
 # command to run tests
 script: 
   - python selfDrivingCar_test.py
+
+notifications:
+  email:
+    recipients:
+      - mingerz.k@gmail.com 
+    on_success: change
+    on_failure: always
